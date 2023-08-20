@@ -1,0 +1,9 @@
+__pycache__
+logs
+*.yaml
+*.jpg
+*.png
+*.csv
+.vscode
+datasets
+recognizer.torchscript
