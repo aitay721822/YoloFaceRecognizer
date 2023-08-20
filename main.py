@@ -57,6 +57,8 @@ def main():
         image_path_map = face_detection(args.face_weight, args.source, unlabeled_path, args.conf_threshold)
         if not args.skip_build_datasets:
             build(unlabeled_path, datasets_path, args.train_set_split)
+        else:
+            input('maunual build datasets, press enter to continue')
     else:
         image_path_map = {}
         for i, f in enumerate(os.listdir(args.source)):
