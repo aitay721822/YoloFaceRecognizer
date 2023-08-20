@@ -22,5 +22,3 @@ def build_datasets(unlabel_path: str, dataset_path: str):
     image_labeling_app.show()
     app.exec()
     
-if __name__ == '__main__':
-    build_datasets("C:\\Users\\ChungYu Lin\\Desktop\\ff", "C:\\Users\\ChungYu Lin\\Desktop\\ff2")
