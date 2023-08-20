@@ -80,8 +80,8 @@ def main():
     for path, names, predict_label, predict_conf in recognizer.recognize(unlabeled_path):
         print(f'{path}: {names} ({predict_label}) ({predict_conf}))')
         filename = os.path.basename(path)
-        if predict_conf > args.conf_threshold:
-            shutil.copy(image_path_map[filename], os.path.join(args.target, f'{names[predict_label]}_{predict_conf:.2f}.jpg'))
+        if predict_conf.item() > args.conf_threshold:
+            shutil.copy(image_path_map[filename], os.path.join(args.target, f'{names[predict_label]}_{predict_conf:.2f}_{filename}'))
 
 if __name__ == '__main__':
     main()
