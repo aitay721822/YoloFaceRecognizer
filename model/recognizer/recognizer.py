@@ -2,7 +2,7 @@ import os
 from ultralytics import YOLO
 from model.recognizer.config import RecognizerConfig
 
-PRETRAINED_MODEL_PATH = os.path.join(os.path.dirname(__file__), 'weights', 'yolov8l-cls.pt')
+PRETRAINED_MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'weights', 'yolov8l-cls.pt')
 
 class Recognizer:
     
