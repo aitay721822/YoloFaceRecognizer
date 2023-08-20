@@ -5,7 +5,7 @@ from .image_select import ImageLabelingApp
 
 def build_datasets(unlabel_path: str, dataset_path: str):
     if not os.path.exists(dataset_path):
-        os.mkdir(dataset_path)
+        os.makedirs(dataset_path)
     
     def label_callback(image_label_map):
         for image, label in image_label_map.items():

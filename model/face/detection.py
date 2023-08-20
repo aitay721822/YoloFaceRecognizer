@@ -11,7 +11,7 @@ class FaceDetector:
         self.config.update(overwrite)
     
     def detect(self, image_path: str, **kwargs):
-        results = self.model.predict(image_path, **kwargs)
+        results = self.model.predict(image_path, stream=True, **kwargs)
         for result in results:
             if result.boxes is None or len(result.boxes) == 0:
                 continue

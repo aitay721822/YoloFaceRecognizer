@@ -17,7 +17,7 @@ class Recognizer:
         
         overwrite = self.config.yolo_config()
         overwrite.update(kwargs)
-        results = self.backend(image_path, **overwrite)
+        results = self.backend(image_path, stream=True, **overwrite)
         for result in results:
             yield result.path, result.names, result.probs.top1, result.probs.top1conf
     
